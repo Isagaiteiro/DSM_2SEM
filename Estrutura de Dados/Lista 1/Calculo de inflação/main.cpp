@@ -12,7 +12,7 @@ int main(){
     int x=1;
     
     //Repetição para preenchimento do vetor
-    for(int i=0; i<=2;i++){
+    for(int i=0; i<=9;i++){
         cout<<"Digite o valor do "<< x << "° produto:\n";
         cin>>produtos[i];
         x++;
@@ -26,7 +26,7 @@ int main(){
     cout<<"---------------------\n";
     
     //Repetição para imprimir o valor antigo na tela
-    for(int i=0; i<=2;i++){
+    for(int i=0; i<=9;i++){
         cout<< x <<"° Produto "<< " : "<<produtos[i]<<endl;
         x++;
     }
@@ -37,7 +37,7 @@ int main(){
     //
     cout<<"Preço Atualizado\n";
     cout<<"---------------------\n";
-    for(int i=0; i<=2;i++){
+    for(int i=0; i<=9;i++){
         produtos[i]=produtos[i]*1.15;
         cout<< x <<"° Produto "<< " : "<<produtos[i]<<endl;
         x++;
