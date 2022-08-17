@@ -34,9 +34,10 @@ int main(){
     
     //Reseta o valor de x
     x=1;
-    //
+ 
     cout<<"Preço Atualizado\n";
     cout<<"---------------------\n";
+    //Repetição para armazenar no vetor e imprimir na tela o valor atualizado
     for(int i=0; i<=9;i++){
         produtos[i]=produtos[i]*1.15;
         cout<< x <<"° Produto "<< " : "<<produtos[i]<<endl;
