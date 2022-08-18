@@ -1,5 +1,6 @@
 #include <iostream>
 #include <locale>
+#include <cstdlib>
 using namespace std;
 
 //Os preços dos produtos de uma loja serão atualizados por conta da inflação que aumentou 15%. 
