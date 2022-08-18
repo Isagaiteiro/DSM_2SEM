@@ -1,5 +1,6 @@
 #include <iostream>
 #include <locale>
+#include <cstdlib>
 using namespace std;
 
 //Fazer   um   programaque   lê   um   conjunto   de   10   valores   inteiros   
