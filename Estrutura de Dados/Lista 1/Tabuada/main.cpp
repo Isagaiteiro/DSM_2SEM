@@ -6,9 +6,6 @@ using namespace std;
 
 //Fazer um programa que imprime,em formato detabela,a tabuada de 1 a 9.
 
-//Cabeçalho.
-int main(int);
-
 int main(){
     setlocale(LC_ALL, "portuguese");
     int x=1;
