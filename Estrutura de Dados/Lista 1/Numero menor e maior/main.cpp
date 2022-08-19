@@ -16,7 +16,7 @@ int main(int argc, char** argv){
     cout<<"================================\n";
     
     //Repetição para preencher o array com float.
-    for(int i=0; i<=4; i++){
+    for(int i=0; i<=9; i++){
         cout<<"Digite a "<<i+1<<" nota do aluno.\n";
         cin>>numeros[i];
     }
@@ -24,12 +24,12 @@ int main(int argc, char** argv){
 
     //Repetição para imprimir todas as notas do array.
     cout<<"O aluno obteve as seguintes notas: \n";
-    for(int i=0; i<=4; i++){
+    for(int i=0; i<=9; i++){
         cout<<numeros[i]<<endl;
     }
     
     //Repetição para verificar qual é a menor nota do array.
-    for(int i=0; i<=4; i++){
+    for(int i=0; i<=9; i++){
         if(numeros[i]<menor){
             menor=numeros[i];
         }
@@ -38,7 +38,7 @@ int main(int argc, char** argv){
     cout<<"A menor nota do aluno é "<<menor<<endl;
     
     //Repetição para verificar qual é a maior nota do array.
-    for(int i=0; i<=4; i++){
+    for(int i=0; i<=9; i++){
         if(numeros[i]>maior){
             maior=numeros[i];
         }
