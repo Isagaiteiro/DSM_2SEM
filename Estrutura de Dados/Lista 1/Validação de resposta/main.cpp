@@ -22,7 +22,7 @@ int main(int argc, char** argv){
     cout<<"Digite Sim ou Não: \n";
     cin>>resposta;
     
-    //Chamando a função para motrar a resposta.
+    //Chamando a função para mostrar a resposta.
     cout<<resp(resposta);
 
     return 0;
