@@ -27,5 +27,5 @@ int main(int argc, char** argv){
 
 float resultado(int valor[4]){
     
-    return (valor[0]*3)+(valor[1]*valor[1])+(valor[2]*valor[2]);
+    return (valor[0]*3)+(valor[1]*valor[1])+(valor[2]*valor[2])+(valor[3]*valor[3]);
 }
