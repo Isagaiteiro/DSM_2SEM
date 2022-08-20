@@ -9,13 +9,23 @@ se é par,impar ou número primo. As mensagensde “É par” ou “É impar” 
 devem ser exibidas na própria função, ou seja, a função em si não deve retornar
 nada.*/
 
+//Cabeçalho.
+void teste(int num);
+
 int main(){
     setlocale(LC_ALL, "portuguese");
-    int num, aux, divisao=0;
+    int num;
     
     //Receber o numero inteiro na variável num;
     cout<<"Digite um número: \n";
     cin>>num;
+    
+    teste(num);
+    return 0;
+}
+
+void teste(int num){
+    int aux, divisao=0;
     
     //Teste se o numero é par.
     if(num%2==0){
@@ -38,6 +48,4 @@ int main(){
     }else{
         cout<<"E ele não é primo.\n";
     }
-    
-    return 0;
 }
