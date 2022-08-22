@@ -40,7 +40,7 @@ int main(int argc, char** argv)
 int crescente(int numeros[10]){
     int auxiliar;
     
-    //boubble sort
+    //bubble sort
     for(int i=0;i<10;i++){
             for (int j=0;j<10;j++){
                  if(numeros[i]<numeros[j]){
@@ -57,7 +57,7 @@ int crescente(int numeros[10]){
 int decrescente(int numeros[10]){
     int auxiliar;
     
-    //boubble sort
+    //bubble sort
     for(int i=0;i<10;i++){
             for (int j=0;j<10;j++){
                  if(numeros[i]>numeros[j]){
