@@ -1,7 +1,9 @@
 /*
+
 Considere uma estrutura de conta corrente contendo o nome do titular, 
 o CPF e o valor na conta. Escreva uma função que cadastre 5 usuários e os exiba 
 na tela ordenados de forma decrescente de acordo com o valor na conta.
+
 */
 #include <stdio.h>
 #include <stdlib.h>
