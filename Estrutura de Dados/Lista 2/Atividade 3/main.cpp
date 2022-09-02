@@ -37,6 +37,7 @@ double entrada()
     cout<<p1.x<<"|"<<p1.y<<"|"<<p2.x<<"|"<< p2.y<<endl;
     distancia = pow((p2.x-p1.x)*(p2.x-p1.x) + (p2.y-p1.y)*(p2.y-p1.y), 0.5);
     
+    cout<<"\nA distância entre os ponto é:\n";
     return distancia;
 }
 
