@@ -3,14 +3,13 @@
 Considerando a estrutura do exercício anterior, escreva uma função que receba seis pontos, 
 preenchidos pelo  usuário.  Os  três  primeiros  pontos  formam  um  triângulo  e  os  outros  
 três  formam  outro  triângulo. Comparando os dois triângulos, classifique se são isósceles, 
-equiláteros e escalenos. DICA: segue o link para saber como classificar um triângulo de acordo com os lados dele.
+equiláteros e escalenos.
 
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include <iostream>
-#include <math.h>
+
 
 using namespace std;
 
@@ -25,7 +24,7 @@ int main()
 {
     struct Ponto p[2];
     
-    cout << "Digite os três pontos do primeiro triângulo\n";
+    cout << "Digite os três pontos do primeiro triângulo:\n";
     cin >> p[0].x;
     cin >> p[0].y;
     cin >> p[0].z;
@@ -52,4 +51,3 @@ int main()
     					}
     }
     return 0;
-}
