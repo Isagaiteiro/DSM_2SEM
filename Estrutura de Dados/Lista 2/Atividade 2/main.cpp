@@ -54,72 +54,72 @@ int main(){
     }
     
     //Busque a pessoa mais velha
-    for(i=0; i<5; i++){
-        for(j=0; i<5; i++){
-            if(p[i].data_nasc.dia<p[j].data_nasc.dia){
+    for(int i=0; i<5; i++){
+        for(int j=0; i<5; i++){
+            if(p[i].data_nasc.ano>=p[j].data_nasc.ano){
                 
+                strcpy(aux_nome,p[j].nome);
                 aux_dia=p[j].data_nasc.dia;
-                p[j].data_nasc.dia=p[i].data_nasc.dia;
-                p[i].data_nasc.dia=aux_dia;
-                
-                aux_nome=p[i].nome;
-                p[i].nome=p[j].nome;
-                p[j].nome=aux_nome;
-                
                 aux_mes=p[j].data_nasc.mes;
-                p[j].data_nasc.mes=p[i].data_nasc.mes;
-                p[i].data_nasc.mes=aux_mes;
-                
                 aux_ano=p[j].data_nasc.ano;
+                
+                strcpy(p[j].nome,p[i].nome);
+                p[j].data_nasc.dia=p[i].data_nasc.dia;
+                p[j].data_nasc.mes=p[i].data_nasc.mes;
                 p[j].data_nasc.ano=p[i].data_nasc.ano;
+                
+                strcpy(p[i].nome,aux_nome);
+                p[i].data_nasc.dia=aux_dia;
+                p[i].data_nasc.mes=aux_mes;
                 p[i].data_nasc.ano=aux_ano;
-                    
-                if(p[i].data_nasc.mes>p[j].data_nasc.mes){
-                    
-                    aux_mes=p[j].data_nasc.mes;
-                    p[j].data_nasc.mes=p[i].data_nasc.mes;
-                    p[i].data_nasc.mes=aux_mes;
-                    
-                    aux_nome=p[i].nome;
-                    p[i].nome=p[j].nome;
-                    p[j].nome=aux_nome;
-                    
-                    aux_dia=p[j].data_nasc.dia;
-                    p[j].data_nasc.dia=p[i].data_nasc.dia;
-                    p[i].data_nasc.dia=aux_dia;
-                    
-                    aux_ano=p[j].data_nasc.ano;
-                    p[j].data_nasc.ano=p[i].data_nasc.ano;
-                    p[i].data_nasc.ano=aux_ano;
-                    
-                    if(p[i].data_nasc.ano>p[j].data_nasc.ano){
-                        
-                        aux_ano=p[j].data_nasc.ano;
-                        p[j].data_nasc.ano=p[i].data_nasc.ano;
-                        p[i].data_nasc.ano=aux_ano;
-                           
-                        aux_nome=p[i].nome;
-                        p[i].nome=p[j].nome;
-                        p[j].nome=aux_nome;
-                           
-                        aux_dia=p[j].data_nasc.dia;
-                        p[j].data_nasc.dia=p[i].data_nasc.dia;
-                        p[i].data_nasc.dia=aux_dia;
-                        
-                        aux_mes=p[j].data_nasc.mes;
-                        p[j].data_nasc.mes=p[i].data_nasc.mes;
-                        p[i].data_nasc.mes=aux_mes;
-                       
-                    }
-                    
-                }
+            }
+            
+            if(p[i].data_nasc.mes>p[j].data_nasc.mes){
+                
+                strcpy(aux_nome,p[j].nome);
+                aux_dia=p[j].data_nasc.dia;
+                aux_mes=p[j].data_nasc.mes;
+                aux_ano=p[j].data_nasc.ano;
+                
+                strcpy(p[j].nome,p[i].nome);
+                p[j].data_nasc.dia=p[i].data_nasc.dia;
+                p[j].data_nasc.mes=p[i].data_nasc.mes;
+                p[j].data_nasc.ano=p[i].data_nasc.ano;
+                
+                strcpy(p[i].nome,aux_nome);
+                p[i].data_nasc.dia=aux_dia;
+                p[i].data_nasc.mes=aux_mes;
+                p[i].data_nasc.ano=aux_ano;
+            }
+            if(p[i].data_nasc.dia>p[j].data_nasc.dia){
+                
+                strcpy(aux_nome,p[j].nome);
+                aux_dia=p[j].data_nasc.dia;
+                aux_mes=p[j].data_nasc.mes;
+                aux_ano=p[j].data_nasc.ano;
+                
+                strcpy(p[j].nome,p[i].nome);
+                p[j].data_nasc.dia=p[i].data_nasc.dia;
+                p[j].data_nasc.mes=p[i].data_nasc.mes;
+                p[j].data_nasc.ano=p[i].data_nasc.ano;
+                
+                strcpy(p[i].nome,aux_nome);
+                p[i].data_nasc.dia=aux_dia;
+                p[i].data_nasc.mes=aux_mes;
+                p[i].data_nasc.ano=aux_ano;
             }
         }
     }
+    cout<<"Lista ordenada: \n";
+    for(i=0; i<5; i++){
+        cout<<p[i].nome<<endl;
+        cout<<p[i].data_nasc.dia<<" / "<<p[i].data_nasc.mes<<" / "<<p[i].data_nasc.ano<<endl;
+        cout<<"-----------\n";
+    }
     //Exiba o nome e a data de nascimento dessa pessoa mais velha
     cout<<"A pessoa mais velha é: \n";
-    //cout<<p[cont].nome<<endl;
-    //cout<<p[cont].data_nasc.dia<<" / "<<p[cont].data_nasc.mes<<" / "<<p[cont].data_nasc.ano<<endl;
+    cout<<p[0].nome<<endl;
+    cout<<p[0].data_nasc.dia<<" / "<<p[0].data_nasc.mes<<" / "<<p[0].data_nasc.ano<<endl;
     cout<<"-----------\n";
    
     
