@@ -35,26 +35,27 @@ int main()
         p[i].codigo=i+1;
     }
     
-    //p[0].nome="Arroz";
+    p[0].nome=="Arroz";
     p[0].preco=14.56;
     p[0].quantidade=180;
     
-    //p[1].nome="Feijão";
+    p[1].nome=="Feijão";
     p[1].preco=7.66;
     p[1].quantidade=100;
     
-    //p[2].nome="Trigo";
+    p[2].nome=="Trigo";
     p[2].preco=5.42;
     p[2].quantidade=40;
     
-    //p[3].nome="Açúcar";
+    p[3].nome=="Açúcar";
     p[3].preco=12.58;
     p[3].quantidade=150;
     
-    //p[4].nome="Macarrão";
+    p[4].nome=="Macarrão";
     p[4].preco=4.23;
     p[4].quantidade=50;
     
+    cout<<p[4].nome;
     do{
         cout<<"Digite o código do Produto que deseja:\n";
         cin>>psq_cod;
@@ -69,16 +70,18 @@ int main()
                 if(qnt_prod<=p[i].quantidade){
                     p[i].quantidade=p[i].quantidade-qnt_prod;
                     cout<<"Os produtos foram retirados do estoque.\n";
-                    cout<<"Ainda há "<<p[i].quantidade<<" unidades no estoque.\n";
-                }
-                if(qnt_prod>p[i].quantidade){
-                    cout<<"A quantidade em estoque é insuficiente.\nHá somente "<<p[i].quantidade<<" unidades no estoque.\n";
-                }
+                    cout<<"Ainda há "<<p[i].quantidade<<" unidades de "<<p[i].nome<<" no estoque.\n";
+                } else {
+                    if(qnt_prod>p[i].quantidade){
+                        cout<<"A quantidade em estoque é insuficiente.\nHá somente "<<p[i].quantidade<<" unidades no estoque.\n";
+                    }
                 
+                }
             }
         }
         cout<<"Deseja realizar mais uma compra? (s) ou (n)\n";
         cin>>resp;
     }while(resp=='s' || resp=='S' );
+    
     return 0;
 }
