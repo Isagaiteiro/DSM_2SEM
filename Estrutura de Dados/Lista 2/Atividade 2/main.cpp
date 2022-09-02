@@ -28,8 +28,7 @@ struct pessoa {
 int main(){
     
     int i, j;
-    struct pessoa p[5];
-    int aux_dia, aux_mes, aux_ano;
+    struct pessoa p[5], aux;
     char aux_nome[30];
     
     //Popule um vetor (através do usuário) que tenha 5 unidades
@@ -56,41 +55,43 @@ int main(){
     //Busque a pessoa mais velha
     for(int i=0; i<5; i++){
         for(int j=0; i<5; i++){
-            if(p[i].data_nasc.ano>=p[j].data_nasc.ano){
+            if(p[i].data_nasc.ano<p[j].data_nasc.ano){
                 
-                strcpy(aux_nome,p[j].nome);
-                aux_dia=p[j].data_nasc.dia;
-                aux_mes=p[j].data_nasc.mes;
-                aux_ano=p[j].data_nasc.ano;
+                strcpy(aux.nome,p[j].nome);
+                aux.data_nasc.dia=p[j].data_nasc.dia;
+                aux.data_nasc.mes=p[j].data_nasc.mes;
+                aux.data_nasc.ano=p[j].data_nasc.ano;
                 
                 strcpy(p[j].nome,p[i].nome);
                 p[j].data_nasc.dia=p[i].data_nasc.dia;
                 p[j].data_nasc.mes=p[i].data_nasc.mes;
                 p[j].data_nasc.ano=p[i].data_nasc.ano;
                 
-                strcpy(p[i].nome,aux_nome);
-                p[i].data_nasc.dia=aux_dia;
-                p[i].data_nasc.mes=aux_mes;
-                p[i].data_nasc.ano=aux_ano;
+                strcpy(p[i].nome,aux.nome);
+                p[i].data_nasc.dia=aux.data_nasc.dia;
+                p[i].data_nasc.mes=aux.data_nasc.mes;
+                p[i].data_nasc.ano=aux.data_nasc.ano;
             }
             
+            /*
             if(p[i].data_nasc.mes>p[j].data_nasc.mes){
                 
-                strcpy(aux_nome,p[j].nome);
-                aux_dia=p[j].data_nasc.dia;
-                aux_mes=p[j].data_nasc.mes;
-                aux_ano=p[j].data_nasc.ano;
+                strcpy(aux.nome,p[j].nome);
+                aux.data_nasc.dia=p[j].data_nasc.dia;
+                aux.data_nasc.mes=p[j].data_nasc.mes;
+                aux.data_nasc.ano=p[j].data_nasc.ano;
                 
                 strcpy(p[j].nome,p[i].nome);
                 p[j].data_nasc.dia=p[i].data_nasc.dia;
                 p[j].data_nasc.mes=p[i].data_nasc.mes;
                 p[j].data_nasc.ano=p[i].data_nasc.ano;
                 
-                strcpy(p[i].nome,aux_nome);
-                p[i].data_nasc.dia=aux_dia;
-                p[i].data_nasc.mes=aux_mes;
-                p[i].data_nasc.ano=aux_ano;
+                strcpy(p[i].nome,aux.nome);
+                p[i].data_nasc.dia=aux.data_nasc.dia;
+                p[i].data_nasc.mes=aux.data_nasc.mes;
+                p[i].data_nasc.ano=aux.data_nasc.ano;
             }
+            
             if(p[i].data_nasc.dia>p[j].data_nasc.dia){
                 
                 strcpy(aux_nome,p[j].nome);
@@ -108,6 +109,7 @@ int main(){
                 p[i].data_nasc.mes=aux_mes;
                 p[i].data_nasc.ano=aux_ano;
             }
+            */
         }
     }
     cout<<"Lista ordenada: \n";
