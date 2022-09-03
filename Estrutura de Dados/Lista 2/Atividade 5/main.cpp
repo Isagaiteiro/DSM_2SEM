@@ -1,12 +1,10 @@
 /******************************************************************************
-
 Faça um programa que gerencie o estoque de um mercado e:.●Leia um pedido, 
 composto por um código de produto e a quantidade. Localize este código no vetor e, se houver 
 quantidade suficiente para atender ao pedido integralmente, faça o pedido, atualize o estoque 
 e informe o usuário (exibir na tela item vendido, quantidade vendida e quantos restam no estoque). 
 Repita este processo até zerar o estoque. Se a quantidade do pedido for maior que o estoque, exibir 
 mensagem com a quantidade de itens no estoque.  
-
 *******************************************************************************/
 #include <stdio.h>
 #include <stdlib.h>
