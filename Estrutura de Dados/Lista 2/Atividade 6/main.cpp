@@ -13,6 +13,7 @@ Procure na internet por Rand, Srand e Random.
 #include <time.h>
 #include <cstring>
 
+
 /*O número do sorteio está vinculado a um nome, portanto use struct*/
 using namespace std;
 
@@ -30,7 +31,9 @@ int sorteio(){
     
     int num_secreto;
     
-    srand(time(0));
+    
+    srand(0);
+   
     num_secreto = rand() % 10 + 1;
     return num_secreto;
 }
@@ -67,8 +70,11 @@ int main()
             resp='s';
         } else {
             cout<<"Você acertou!\n";
+            cout<<"A pessoa sorteada foi: "<<p[sorteio()-1].nome<<endl;
             resp='n';
         }
     }while(resp=='s');
     return 0;
 }
+
+
