@@ -11,6 +11,7 @@ Procure na internet por Rand, Srand e Random.
 #include <iostream>
 #include <cstdlib>
 #include <time.h>
+#include <cstring>
 
 /*O número do sorteio está vinculado a um nome, portanto use struct*/
 using namespace std;
@@ -40,16 +41,16 @@ int main()
     int chute;
     char resp;
     
-    p[0].nome=="Suelen";
-    p[1].nome=="Rafaela";
-    p[2].nome=="Joelma";
-    p[3].nome=="Abner";
-    p[4].nome=="Joel";
-    p[5].nome=="Israel";
-    p[6].nome=="Tânia";
-    p[7].nome=="Erondi";
-    p[8].nome=="Daniela";
-    p[9].nome=="Rayssa";
+    strcpy(p[0].nome,"Suelen");
+    strcpy(p[1].nome,"Rafaela");
+    strcpy(p[2].nome,"Joelma");
+    strcpy(p[3].nome,"Abner");
+    strcpy(p[4].nome,"Joel");
+    strcpy(p[5].nome,"Israel");
+    strcpy(p[6].nome,"Tânia");
+    strcpy(p[7].nome,"Erondi");
+    strcpy(p[8].nome,"Daniela");
+    strcpy(p[9].nome,"Rayssa");
     
     
     for(int i=0; i<10; i++){
@@ -71,4 +72,3 @@ int main()
     }while(resp=='s');
     return 0;
 }
-
