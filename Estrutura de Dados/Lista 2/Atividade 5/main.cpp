@@ -35,27 +35,27 @@ int main()
         p[i].codigo=i+1;
     }
     
-    p[0].nome=="Arroz";
+    strcpy(p[0].nome,"Arroz");
     p[0].preco=14.56;
     p[0].quantidade=180;
     
-    p[1].nome=="Feijão";
+    strcpy(p[1].nome,"Feijão");
     p[1].preco=7.66;
     p[1].quantidade=100;
     
-    p[2].nome=="Trigo";
+    strcpy(p[2].nome,"Trigo");
     p[2].preco=5.42;
     p[2].quantidade=40;
     
-    p[3].nome=="Açúcar";
+    strcpy(p[3].nome,"Açúcar");
     p[3].preco=12.58;
     p[3].quantidade=150;
     
-    p[4].nome=="Macarrão";
+    strcpy(p[4].nome,"Macarrão");
     p[4].preco=4.23;
     p[4].quantidade=50;
     
-    cout<<p[4].nome;
+    
     do{
         cout<<"Digite o código do Produto que deseja:\n";
         cin>>psq_cod;
@@ -85,3 +85,4 @@ int main()
     
     return 0;
 }
+
