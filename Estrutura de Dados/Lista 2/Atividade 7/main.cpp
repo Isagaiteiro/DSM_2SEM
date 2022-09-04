@@ -76,28 +76,25 @@ int main(){
         k=v[x].destino-1;
         
       
-        /*
-        if(x>=5){
-                        cout<<"Número máximo de embarques e desembarques foi atingido.\n O seu voo não pode ser agendado no momento...\n";
-                    }}*/
-            if(v[x].origem!=v[x].destino){
+        
+        if(v[x].origem!=v[x].destino){
+            
+            if(x<5){
+                x++;
+                cout<<"Sua viagem do "<<a[j].nome<<" para o "<<a[k].nome<<" foi cadastrado no sistema.\n";
                 
-                if(x<5){
-                    x++;
-                    cout<<"Sua viagem do "<<a[j].nome<<" para o "<<a[k].nome<<" foi cadastrado no sistema.\n";
-                    
-                } else {
-                    cout<<"Número de embarques foi exedido.\n";
-                    resp=='n';
-                }
             } else {
-                if(v[x].origem==v[x].destino){
-                    x--;
-                    cout<<"Destino inválido, escolha novamente\n";
-                    
-                }
+                cout<<"Número de embarques foi exedido.\n";
+                resp=='n';
+            }
+        } else {
+            if(v[x].origem==v[x].destino){
+                x--;
+                cout<<"Destino inválido, escolha novamente\n";
                 
-            } 
+            }
+            
+        } 
         
         cout<<"Deseja cadastrar um novo voo? (s) ou (n)\n";
         cin>>resp; 
