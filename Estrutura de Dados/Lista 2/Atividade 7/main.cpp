@@ -38,14 +38,16 @@ struct voo{
     int destino;
     struct aeroporto;
 };
+
 int main(){
     struct voo v[10];
     struct aeroporto a[5];
-    int resp, x=0;
+    int x=0, j, k;
+    char resp='n';
     
     //Populando o vetor com o código de cada aeroporto.
     for(int i=0; i<5; i++){
-        a[i].codigo=i+1;
+        a[i].codigo=i;
     }
     //Atribuindo o nome de cada aeroporo
     strcpy(a[0].nome,"Aeroporto de São Paulo");
@@ -55,56 +57,55 @@ int main(){
     strcpy(a[4].nome,"Aeroporto de Brasilia");
     
     do{
-        //if(x<10){
-            cout<<"Escolha onde deseja embarcar: \n";
-            cout<<"1- São Paulo\n";
-            cout<<"2- Rio de Janeiro\n";
-            cout<<"3- Curitiba\n";
-            cout<<"4- Salvador\n";
-            cout<<"5- Brasilia\n";
-            cin>>v[x].origem;
-            
-            cout<<"Escolha o destino da viagem: \n";
-            cout<<"1- São Paulo\n";
-            cout<<"2- Rio de Janeiro\n";
-            cout<<"3- Curitiba\n";
-            cout<<"4- Salvador\n";
-            cout<<"5- Brasilia\n";
-            cin>>v[x].destino;
-            
-            
-            for(int i=0; i<5; i++){
-                if(v[x].origem==v[x].destino && v[x].origem==a[i].codigo){
-                    cout<<"Destino inválido, escolha novamente\n";
-                    resp='s';
-                } else {
-                    if(v[x].origem==a[i].codigo && v[x].origem!=v[x].destino){
-                    cout<<"Sua viagem foi cadastrada no sistema.\n";
-                    cout<<"Deseja cadastrar um novo voo? (s) ou (n)\n";
-                    cin>>resp;
-                    
-                    }
-                } 
-            }
-        x++;
-        /*
-        }
+        cout<<"Escolha onde deseja embarcar: \n";
+        cout<<"1- São Paulo\n";
+        cout<<"2- Rio de Janeiro\n";
+        cout<<"3- Curitiba\n";
+        cout<<"4- Salvador\n";
+        cout<<"5- Brasilia\n";
+        cin>>v[x].origem;
+        j=v[x].origem-1;
         
-        } else {
-            if(x>=10){
-                cout<<"O número de voos foi excedido!";
-                resp='n';            }
-        }
-        */
-    }while(resp=='S' || resp=='s');
+        cout<<"Escolha o destino da viagem: \n";
+        cout<<"1- São Paulo\n";
+        cout<<"2- Rio de Janeiro\n";
+        cout<<"3- Curitiba\n";
+        cout<<"4- Salvador\n";
+        cout<<"5- Brasilia\n";
+        cin>>v[x].destino;
+        k=v[x].destino-1;
+        
+      
+        /*
+        if(x>=5){
+                        cout<<"Número máximo de embarques e desembarques foi atingido.\n O seu voo não pode ser agendado no momento...\n";
+                    }}*/
+            if(v[x].origem!=v[x].destino){
+                
+                if(x<5){
+                    x++;
+                    cout<<"Sua viagem do "<<a[j].nome<<" para o "<<a[k].nome<<" foi cadastrado no sistema.\n";
+                    
+                } else {
+                    cout<<"Número de embarques foi exedido.\n";
+                    resp=='n';
+                }
+            } else {
+                if(v[x].origem==v[x].destino){
+                    x--;
+                    cout<<"Destino inválido, escolha novamente\n";
+                    
+                }
+                
+            } 
+        
+        cout<<"Deseja cadastrar um novo voo? (s) ou (n)\n";
+        cin>>resp; 
+        
+    }while(resp=='s' || resp=='S');
     
-    /*
-    Um  aeroporto  
-    não  pode  ter  mais  de  10  voos  nem  de  chegada  e  nem  de  saída,  faça  a verificação disso.
-    Por fim, exiba na tela o nome de cada aeroporto e os voos que chegaram e saíram dele, ou seja, 
-    o nome do aeroporto de origem do voo e o nome do aeroporto de destino do voo.
-    */
+    cout<<"Obrigado por viajar conosco\n";
+    
     
     return 0;
 }
-
