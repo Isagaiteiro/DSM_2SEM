@@ -12,20 +12,20 @@ using namespace std;
 
 int main()
 {
-    float *num, numeros[5], maior, pesq, controle;
+    float *num, numeros[10], maior, pesq, controle;
     
     num=&numeros[0];
     
     
-    for(int i=0; i<5; i++){
+    for(int i=0; i<10; i++){
         cout<<"Digite o "<<i+1<<"º número decimal:\n";
         cin>>*(num+i);
         
     }
     cout<<"--------------------------------------\n";
     
-    for(int i=0; i<5; i++){
-        for(int j=0; j<5; j++){
+    for(int i=0; i<10; i++){
+        for(int j=0; j<10; j++){
             if(*(num+i) < *(num+j)){
                 maior=*(num+j);
                 *(num+j)=*(num+i);
@@ -34,7 +34,7 @@ int main()
         }
         
     }
-    for(int i=0; i<5; i++){
+    for(int i=0; i<10; i++){
         cout<<*(num+i)<<endl;
        
     }
@@ -42,7 +42,7 @@ int main()
     cout<<"Digite o número que deseja encontrar: \n";
     cin>>pesq;
     
-    for(int i=0; i<5; i++){
+    for(int i=0; i<10; i++){
         if(*(num+i)==pesq){
             cout<<"Esse número está na lista!\n";
             controle=0;
