@@ -19,8 +19,7 @@ int main()
     
     for(int i=0; i<10; i++){
         cout<<"Digite o "<<i+1<<"º número decimal:\n";
-        cin>>*(num+i);
-        
+        cin>>*(num+i);  
     }
     cout<<"--------------------------------------\n";
     
@@ -31,12 +30,11 @@ int main()
                 *(num+j)=*(num+i);
                 *(num+i)=maior;
             }
-        }
-        
+        }  
     }
+    
     for(int i=0; i<10; i++){
         cout<<*(num+i)<<endl;
-       
     }
     
     cout<<"Digite o número que deseja encontrar: \n";
@@ -48,8 +46,7 @@ int main()
             controle=0;
         } else {
             controle=1;
-        }
-         
+        }  
     }
     if(controle==1){
         cout<<"Esse número não está na lista!\n"; 
