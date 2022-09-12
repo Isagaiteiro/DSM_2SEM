@@ -15,7 +15,7 @@ using namespace std;
 
 int main()
 {
-    int *ptr1, numeros[9], maior, *ptr2, matriz[3][3], x=0, j=0;
+    int *ptr1, numeros[9], maior, *ptr2, matriz[3][3], x=0;
     
     ptr1=&numeros[0];
     ptr2=&matriz[0][0];
@@ -43,26 +43,27 @@ int main()
         cout<<*(ptr1+i)<<endl;
        
     }
-    
+    cout<<"---------\n";
     //c)Crie uma matriz 3x3 e popule essa matriz com os valores do vetor, usando ponteiro.
-    for(j=0; j<3; j++){
+    for(int j=0; j<3; j++){
         *((ptr2+j)+0)=*(ptr1+x);
-        
+        x++;
         *((ptr2+j)+1)=*(ptr1+x);
-        
+        x++;
         *((ptr2+j)+2)=*(ptr1+x);
+        x++;
+        //d)Exiba cada elemento do vetor e da matriz, usando ponteiro.
+        cout<<*((ptr2+j)+0)<<"|"<<*((ptr2+j)+1)<<"|"<<*((ptr2+j)+2)<<endl;
+        cout<<"---------\n";
     }
 
-    
-    for(int i=0; i<3; i++){
-        cout<<*((ptr2+i)+0)<<" | "<<*((ptr2+i)+1)<<" | "<<*((ptr2+i)+2);
-        cout<<"\n--------------\n";
+
         
-        
-    }
     
     
     
     return 0;
 }
+
+
 
