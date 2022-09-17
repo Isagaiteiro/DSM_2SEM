@@ -1,10 +1,12 @@
 package javaapplication6;
 
+import java.util.Scanner;
+
 public class Revisao {
     
     private int x;
     private double d;
-    private String s;
+    private String s="s";
     
     //Condicionais.
     public void metodoIF(){
@@ -40,6 +42,20 @@ public class Revisao {
                
             default:
                 System.out.println("Fora das opcoes");
+        }
+    }
+    
+    public void metodoFor(){
+        for(int i=0; i<3; i++){
+            System.out.println("Valor de i:"+i);
+        }
+    }
+    
+    public void metodoWhile(){
+        
+        while(x<10){
+            System.out.println("X: "+x);
+            x++;
         }
     }
 }
