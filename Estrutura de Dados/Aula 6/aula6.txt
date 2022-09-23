@@ -1,0 +1,73 @@
+Recursividade chama a própria função dentro dela mesma.
+
+Ex.:
+
+int soma (int a, int b){
+	int c, d, e, f;
+	somar = (c*d*e)+(a+b);
+	f=soma(c,d);
+}
+
+Vai e volta a execução em uma cascata de eventos.
+Para definir onde ela vai parar, tem que ter uma condição de parada, um IF.
+Quando usar recursividade:
+- Em algorítimos complexos, que a inplementação é interamente complexa e normalmente reque o uso de pilha.
+
+Ex: 
+int n=5;
+
+if(n==0){
+	T(n)=n + T(n-1);
+	return T(n);
+}
+
+Execução ida:
+T(5)= 5+T(4)
+T(4)= 4+T(3)
+T(3)= 3+T(2)
+T(2)= 2+T(1)
+T(1)= 1+T(0)
+*A cada chamada, n é decrementado, ficando mais próximo da condição de término.
+
+Ele chama e quando chega na condição de parada, ele começa a contabilizar.
+
+Execução de volta:
+1+2+3+4+5
+
+Exemplo do fatorial:
+
+int fatorial(int n){
+	if(n==1){
+		//Condição de parada.
+		return 1;
+	} else {
+		//A lógica do problema está recursiva.
+		return n*fatorial(n-1);
+	}
+}
+
+Como usar:
+1º Definir o problema de forma recursiva.
+2º Definir a condição do termo(condição de parada)
+3º a cada chamada recursiva, deve-se tentar garantir que se está mais próximo de satisfazer a condição do termo. 
+
+Recursão VS Interação de Fibonacci
+
+- Fibonacci
+	int i=10, ult=1, pen=1, aux;
+	for(i=0; i<10; i++){
+		aux=ult;
+		ult=ult+pen;
+		pen=aux;
+	}
+
+-Recursão
+	int fib(int ult, int pen){
+		if(int i<10){
+			return 1;
+		} else {
+			fib(ult,pen);
+			
+			i++;
+		}
+	}
