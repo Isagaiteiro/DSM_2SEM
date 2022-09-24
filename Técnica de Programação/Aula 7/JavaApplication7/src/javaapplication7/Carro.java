@@ -34,4 +34,9 @@ public class Carro extends Veiculo{
     public int getAirbag(){
         return airbag;
     }
+    
+    @Override
+    public void imprimir(){
+        System.out.println("");
+    }
 }
