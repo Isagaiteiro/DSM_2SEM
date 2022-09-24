@@ -37,6 +37,7 @@ public class Carro extends Veiculo{
     
     @Override
     public void imprimir(){
-        System.out.println("");
+        System.out.println("Portas:"+portas);
+        System.out.println("Airbag:"+airbag);
     }
 }
