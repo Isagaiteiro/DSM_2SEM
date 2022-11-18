@@ -29,7 +29,7 @@ public class carro extends terrestre {
 
     @Override
     public void mover(){
-        System.out.println("O carro está se movendo, á "+ getKilometragem() +"Km/hr, com combustivel "+getCombustivel()+", sob a direção do "+motorista);
+        System.out.println("O carro está se movendo, á "+ getKilometragem() +"Km/hr, com combustivel "+getCombustivel()+", sob a direção do motorista "+motorista);
     }
 }
 

@@ -22,13 +22,9 @@ public class navio extends aquatico {
         return super.getCombustivel();
     }
     
-    @Override
-    public int getNos(){
-        return super.gerNos();
-    }
 
     @Override
     public void mover(){
-        System.out.println("O navio está se movendo, á "+ getNos() +"nós, com combustivel "+getCombustivel()+", sob o comando do "+capitao);
+        System.out.println("O navio está se movendo, com combustivel "+getCombustivel()+", sob o comando do capitão"+capitao);
     }
 }

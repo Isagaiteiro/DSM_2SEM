@@ -29,6 +29,6 @@ public class aviao extends aereo {
 
     @Override
     public void mover(){
-        System.out.println("O avião está se movendo, á "+ getAltitude() +"metros de altitude, usando o combustivel "+getCombustivel()+", sob o comando do piloto "+piloto);
+        System.out.println("O avião está se movendo, á "+ getAltitude() +"metros de altitude, usando o combustivel "+getCombustivel()+", sob o comando do piloto "+getPiloto());
     }
 }
