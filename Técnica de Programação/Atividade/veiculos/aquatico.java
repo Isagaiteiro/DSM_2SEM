@@ -4,28 +4,27 @@ public class aquatico extends veiculo {
     
 
     private int botes; 
-    private int cabines;
+    private int nos;
 
-    public aquatico(int rodas, int motor, String cor, String combustivel, int botes, int cabines){
+    public aquatico(int rodas, int motor, String cor, String combustivel, int botes, int nos){
         super(rodas, motor, cor, combustivel);
         this.botes=botes;
-        this.cabines=cabines;
+        this.nos=nos;
     }
     
     public int getBotes(){
         return botes;
     }
 
-    public int gerCabines(){
-        return cabines;
+    public int gerNos(){
+        return nos;
     }
-
 
     public void setBotes(int botes){
         this.botes=botes;
     }
 
-    public void setCabines(int cabines){
-        this.cabines=cabines;
+    public void setNos(int nos){
+        this.nos=nos;
     }
 }

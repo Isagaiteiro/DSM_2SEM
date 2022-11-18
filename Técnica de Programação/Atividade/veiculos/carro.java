@@ -16,4 +16,20 @@ public class carro extends terrestre {
     public void setmotorista(String motorista){
         this.motorista=motorista;
     }
+
+    @Override
+    public int getKilometragem(){
+        return super.getKilometragem();
+    }
+
+    @Override
+    public String getCombustivel(){
+        return super.getCombustivel();
+    }
+
+    @Override
+    public void mover(){
+        System.out.println("O carro está se movendo, á "+ getKilometragem() +"Km/hr, com combustivel "+getCombustivel()+", sob a direção do "+motorista);
+    }
 }
+

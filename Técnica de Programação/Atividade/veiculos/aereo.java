@@ -25,4 +25,6 @@ public class aereo extends veiculo {
     public void setAltitude(int altitude){
         this.altitude=altitude;
     }
+
+    
 }

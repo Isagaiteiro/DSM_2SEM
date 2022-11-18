@@ -16,4 +16,19 @@ public class aviao extends aereo {
     public void setPiloto(String piloto){
         this.piloto=piloto;
     }
+
+    @Override
+    public int getAltitude(){
+        return super.getAltitude();
+    }
+
+    @Override
+    public String getCombustivel(){
+        return super.getCombustivel();
+    }
+
+    @Override
+    public void mover(){
+        System.out.println("O avião está se movendo, á "+ getAltitude() +"metros de altitude, usando o combustivel "+getCombustivel()+", sob o comando do piloto "+piloto);
+    }
 }
