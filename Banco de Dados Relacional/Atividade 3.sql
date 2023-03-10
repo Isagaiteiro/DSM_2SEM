@@ -1,0 +1,1 @@
+SELECT c.id, c.nome, case when tipo = "F" then "Pessoa Fisica" when tipo = "J" then "Pessoa Juridica" ELSE "Sem Classificacao" END AS tipo FROM cliente c
